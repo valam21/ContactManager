@@ -29,3 +29,10 @@ def charger_contacts():
         for row in reader:
             contacts.append(row)
     return contacts
+
+def sauvegarder_contacts(contacts):
+    """Sauvegarde les contacts dans le fichier CSV."""
+    with open(CONTACT_FILE, mode='w', newline='', encoding='utf-8') as file:
+        writer = csv.DictWriter(file, fieldnames=HEADERS)
+        writer.writeheader()
+        writer.writerows(contacts)
