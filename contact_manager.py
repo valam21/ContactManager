@@ -64,3 +64,13 @@ def ajouter_contact(contacts):
     contacts.append(nouveau_contact)
     sauvegarder_contacts(contacts)
     print(f"Contact '{nom}' ajouté avec succès.")
+
+def afficher_tous_contacts(contacts):
+    """Affiche tous les contacts enregistrés."""
+    print("\n--- Tous les Contacts ---")
+    if not contacts:
+        print("Aucun contact enregistré pour le moment.")
+        return
+
+    for i, contact in enumerate(contacts, 1):
+        print(f"{i}. Nom: {contact['Nom']}, Tel: {contact['Telephone']}, Email: {contact['Email']}")
