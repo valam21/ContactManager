@@ -74,3 +74,19 @@ def afficher_tous_contacts(contacts):
 
     for i, contact in enumerate(contacts, 1):
         print(f"{i}. Nom: {contact['Nom']}, Tel: {contact['Telephone']}, Email: {contact['Email']}")
+
+def rechercher_contact(contacts):
+    """Recherche un contact par nom et affiche ses détails."""
+    print("\n--- Rechercher un Contact ---")
+    nom_recherche = input("Entrez le nom du contact à rechercher : ").strip()
+
+    resultats = [c for c in contacts if nom_recherche.lower() in c['Nom'].lower()]
+
+    if not resultats:
+        print(f"Aucun contact trouvé pour '{nom_recherche}'.")
+        return
+
+    print("\n--- Résultats de la Recherche ---")
+    for i, contact in enumerate(resultats, 1):
+        print(f"{i}. Nom: {contact['Nom']}, Tel: {contact['Telephone']}, Email: {contact['Email']}")
+    return resultats  # Retourne les résultats pour faciliter la modification/suppression
