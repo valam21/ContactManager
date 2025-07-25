@@ -47,3 +47,20 @@ def afficher_menu():
     print("5. Supprimer un contact")
     print("6. Quitter")
     print("-------------------------------")
+
+def ajouter_contact(contacts):
+    """Permet à l'utilisateur d'ajouter un nouveau contact."""
+    print("\n--- Ajouter un Contact ---")
+    nom = input("Nom : ").strip()
+    telephone = input("Numéro de téléphone : ").strip()
+    email = input("Adresse e-mail : ").strip()
+
+    # Vérifier si le contact existe déjà par son nom
+    if any(c['Nom'].lower() == nom.lower() for c in contacts):
+        print("Erreur : Un contact avec ce nom existe déjà.")
+        return
+
+    nouveau_contact = {'Nom': nom, 'Telephone': telephone, 'Email': email}
+    contacts.append(nouveau_contact)
+    sauvegarder_contacts(contacts)
+    print(f"Contact '{nom}' ajouté avec succès.")
