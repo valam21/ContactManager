@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3e96d23d-7832-4bba-8b78-c03a33041bb6" name="Changes" comment="Recherche d'un contact par nom et affichage de ses détails.">
+    <list default="true" id="3e96d23d-7832-4bba-8b78-c03a33041bb6" name="Changes" comment="Suppression d'un contact existant.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/contact_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/contact_manager.py" afterDir="false" />
     </list>
@@ -46,6 +46,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python.contact_manager.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "master",
@@ -115,7 +116,23 @@
       <option name="project" value="LOCAL" />
       <updated>1753437096997</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Modification des informations d'un contact existant.">
+      <option name="closed" value="true" />
+      <created>1753438294689</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1753438294689</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Suppression d'un contact existant.">
+      <option name="closed" value="true" />
+      <created>1753438739830</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1753438739830</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -125,6 +142,8 @@
     <MESSAGE value="Permission à l'utilisateur d'ajouter un nouveau contact." />
     <MESSAGE value="Affichage de tous les contacts enregistrés." />
     <MESSAGE value="Recherche d'un contact par nom et affichage de ses détails." />
-    <option name="LAST_COMMIT_MESSAGE" value="Recherche d'un contact par nom et affichage de ses détails." />
+    <MESSAGE value="Modification des informations d'un contact existant." />
+    <MESSAGE value="Suppression d'un contact existant." />
+    <option name="LAST_COMMIT_MESSAGE" value="Suppression d'un contact existant." />
   </component>
 </project>

@@ -149,3 +149,30 @@ def supprimer_contact(contacts):
         print(f"Contact '{nom_a_supprimer}' supprimé avec succès.")
     else:
         print("Suppression annulée.")
+
+def main():
+    """Fonction principale de l'application."""
+    contacts = charger_contacts()
+
+    while True:
+        afficher_menu()
+        choix = input("Choisissez une option : ").strip()
+
+        if choix == '1':
+            ajouter_contact(contacts)
+        elif choix == '2':
+            afficher_tous_contacts(contacts)
+        elif choix == '3':
+            rechercher_contact(contacts)
+        elif choix == '4':
+            modifier_contact(contacts)
+        elif choix == '5':
+            supprimer_contact(contacts)
+        elif choix == '6':
+            print("Merci d'avoir utilisé le Gestionnaire de Contacts. Au revoir !")
+            break
+        else:
+            print("Option invalide. Veuillez réessayer.")
+
+if __name__ == "__main__":
+    main()
