@@ -36,3 +36,14 @@ def sauvegarder_contacts(contacts):
         writer = csv.DictWriter(file, fieldnames=HEADERS)
         writer.writeheader()
         writer.writerows(contacts)
+
+def afficher_menu():
+    """Affiche le menu principal de l'application."""
+    print("\n--- Gestionnaire de Contacts ---")
+    print("1. Ajouter un contact")
+    print("2. Afficher tous les contacts")
+    print("3. Rechercher un contact")
+    print("4. Modifier un contact")
+    print("5. Supprimer un contact")
+    print("6. Quitter")
+    print("-------------------------------")
