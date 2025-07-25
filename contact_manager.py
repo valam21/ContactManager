@@ -126,3 +126,26 @@ def modifier_contact(contacts):
 
     sauvegarder_contacts(contacts)
     print(f"Contact '{nom_a_modifier}' modifié avec succès.")
+
+def supprimer_contact(contacts):
+    """Supprime un contact existant."""
+    print("\n--- Supprimer un Contact ---")
+    nom_a_supprimer = input("Entrez le nom du contact à supprimer : ").strip()
+
+    index_a_supprimer = -1
+    for i, contact in enumerate(contacts):
+        if contact['Nom'].lower() == nom_a_supprimer.lower():
+            index_a_supprimer = i
+            break
+
+    if index_a_supprimer == -1:
+        print(f"Contact '{nom_a_supprimer}' non trouvé.")
+        return
+
+    confirmation = input(f"Êtes-vous sûr de vouloir supprimer '{contacts[index_a_supprimer]['Nom']}' ? (oui/non) : ").lower().strip()
+    if confirmation == 'oui':
+        del contacts[index_a_supprimer]
+        sauvegarder_contacts(contacts)
+        print(f"Contact '{nom_a_supprimer}' supprimé avec succès.")
+    else:
+        print("Suppression annulée.")
