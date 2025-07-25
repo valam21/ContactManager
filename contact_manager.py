@@ -90,3 +90,39 @@ def rechercher_contact(contacts):
     for i, contact in enumerate(resultats, 1):
         print(f"{i}. Nom: {contact['Nom']}, Tel: {contact['Telephone']}, Email: {contact['Email']}")
     return resultats  # Retourne les résultats pour faciliter la modification/suppression
+
+def modifier_contact(contacts):
+    """Modifie les informations d'un contact existant."""
+    print("\n--- Modifier un Contact ---")
+    nom_a_modifier = input("Entrez le nom du contact à modifier : ").strip()
+
+    index_a_modifier = -1
+    for i, contact in enumerate(contacts):
+        if contact['Nom'].lower() == nom_a_modifier.lower():
+            index_a_modifier = i
+            break
+
+    if index_a_modifier == -1:
+        print(f"Contact '{nom_a_modifier}' non trouvé.")
+        return
+
+    contact_original = contacts[index_a_modifier]
+    print(f"Contact actuel : Nom: {contact_original['Nom']}, Tel: {contact_original['Telephone']}, Email: {contact_original['Email']}")
+
+    nouveau_nom = input(f"Nouveau nom (laissez vide pour garder '{contact_original['Nom']}') : ").strip()
+    nouveau_telephone = input(f"Nouveau numéro de téléphone (laissez vide pour garder '{contact_original['Telephone']}') : ").strip()
+    nouvel_email = input(f"Nouvelle adresse e-mail (laissez vide pour garder '{contact_original['Email']}') : ").strip()
+
+    if nouveau_nom:
+        # Vérifier si le nouveau nom existe déjà pour un autre contact
+        if any(c['Nom'].lower() == nouveau_nom.lower() and c != contact_original for c in contacts):
+            print("Erreur : Un autre contact avec ce nouveau nom existe déjà.")
+            return
+        contacts[index_a_modifier]['Nom'] = nouveau_nom
+    if nouveau_telephone:
+        contacts[index_a_modifier]['Telephone'] = nouveau_telephone
+    if nouvel_email:
+        contacts[index_a_modifier]['Email'] = nouvel_email
+
+    sauvegarder_contacts(contacts)
+    print(f"Contact '{nom_a_modifier}' modifié avec succès.")

@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3e96d23d-7832-4bba-8b78-c03a33041bb6" name="Changes" comment="Affichage de tous les contacts enregistrés.">
+    <list default="true" id="3e96d23d-7832-4bba-8b78-c03a33041bb6" name="Changes" comment="Recherche d'un contact par nom et affichage de ses détails.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/contact_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/contact_manager.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -42,15 +43,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "master",
+    "settings.editor.selected.configurable": "preferences.keymap"
   }
-}</component>
+}]]></component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -106,7 +107,15 @@
       <option name="project" value="LOCAL" />
       <updated>1753436903684</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Recherche d'un contact par nom et affichage de ses détails.">
+      <option name="closed" value="true" />
+      <created>1753437096997</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1753437096997</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -115,6 +124,7 @@
     <MESSAGE value="Affichage du menu principal de l'application." />
     <MESSAGE value="Permission à l'utilisateur d'ajouter un nouveau contact." />
     <MESSAGE value="Affichage de tous les contacts enregistrés." />
-    <option name="LAST_COMMIT_MESSAGE" value="Affichage de tous les contacts enregistrés." />
+    <MESSAGE value="Recherche d'un contact par nom et affichage de ses détails." />
+    <option name="LAST_COMMIT_MESSAGE" value="Recherche d'un contact par nom et affichage de ses détails." />
   </component>
 </project>
